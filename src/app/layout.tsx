@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
@@ -16,9 +16,14 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "KerjaYuk",
   description: "UI Created By Mahaasin",
+  manifest: "/manifest.json",
   icons: {
     icon: "https://www.mahaasin.my.id/logo.svg",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#FFFFFF",
 };
 
 export default function RootLayout({
